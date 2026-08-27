@@ -3,8 +3,7 @@ import { mongodbAdapter } from "better-auth/adapters/mongodb";
 import { MongoClient } from "mongodb";
 import { headers } from "next/headers";
 import { initializeUserBoard } from "../init-user-board";
-import { createTeamProject } from "../actions/team-tasks";
-import { initializeTeamProject } from "../ini-user-team";
+// import { initializeTeamProject } from "../ini-user-team";
 
 const client = new MongoClient(process.env.MONGODB_URI!);
 const db = client.db();
@@ -30,7 +29,7 @@ export const auth = betterAuth({
                         try{
                             await Promise.all([
                             await initializeUserBoard(user.id),
-                            await initializeTeamProject("Default Team",user.id)
+                            // await initializeTeamProject("Default Team",user.id)
                         ]);
                         } catch(err){
                             throw err;
