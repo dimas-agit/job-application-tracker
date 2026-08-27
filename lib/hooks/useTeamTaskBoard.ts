@@ -81,6 +81,7 @@ export function useTeamTaskBoard(initialProject?: TeamProject | null) {
       const result = await updateTeamTask(taskId, {
         columnId: newColumnId,
         order: newOrder,
+        
       });
 
       if (result.error) {

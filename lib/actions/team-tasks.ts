@@ -133,8 +133,8 @@ export async function updateTeamTask(
     title?: string;
     description?: string;
     progress?: number;
-    imageUrl:string[];
-    checklistItems: ChecklistItem[];
+    imageUrl?:string[];
+    checklistItems?: ChecklistItem[];
     note?: string;
     columnId?: string;
     order?: number;
